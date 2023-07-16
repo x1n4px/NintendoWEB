@@ -1,3 +1,77 @@
-<section>
-    
+<section id="stc1">
+  <div class="game">
+    <img src="../../../assets/game1.png" alt="">
+  </div>
+
+  <footer>
+    <p>Give this pint-sized adventure a try with a free demo</p>
+    <div class="btnFotter">
+      <button class="shakeButton">Try the demo!</button>
+    </div>
+    <div class="imgFotter">
+      <img src="../../../assets/esrb.png" alt="">
+    </div>
+  </footer>
+</section>
+
+<section id="featured">
+  <div class="content">
+    <span id="title">Featured</span>
+    <img src="../../../assets/pikminCabe.png" alt="">
+    <div class="onlineStoreText">
+      <p>Watch charming short movies, read delightful manga-style comic strips, and more!</p>
+      <button class="shakeButton">Explore now</button>
+    </div>
+
+    <div class="juegosOferta">
+      <div class="btnIzquierdo" (click)="moverSlide(0)" *ngIf="x > 0">
+        <span><</span>
+      </div>
+      <div class="btnDerecho" (click)="moverSlide(1)">
+        <span>></span>
+      </div>
+      <div class="cardsShow" *ngFor="let item of listaJuegos.slice(x,x+4)">
+        <img [src]="item.image" alt="">
+        <div class="content">
+          <span id="itemDescription">{{item.description}}</span>
+          <div class="text-with-bar">
+            <div class="bar"></div>
+            <span>{{item.console}}</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="content">
+    <span id="title">Online store</span>
+    <img src="../../../assets/onlineStoreCab.png" alt="">
+    <div class="onlineStoreText">
+      <p>Shop games, exclusive Nintendo merchandise, and more! Plus, get free shipping on orders $50 and over.</p>
+      <button class="shakeButton">Start shopping</button>
+    </div>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="content">
+    <span id="title">Gaming systems</span>
+    <img src="../../../assets/gamingsystemCab.png" alt="">
+    <div class="onlineStoreText">
+      <p>Find the perfect Nintendo Switch system for you.</p>
+      <button class="shakeButton">Explore now</button>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <h1>News</h1>
+</section>
+
+<section id="characters">
+  <h1>Characters</h1>
 </section>
