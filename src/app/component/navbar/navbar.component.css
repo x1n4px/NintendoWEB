@@ -1,6 +1,7 @@
 .navbar {
-  width: 100%;
+  width:100%;
   border-bottom: 1px solid #cfcdcd;
+  font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 
@@ -15,10 +16,14 @@
 
 .leftDiv {
   flex: 10%;
+  background-color: #e60012;
+  display: flex;
+  justify-content: center;
 }
 
 .leftDiv img {
-  width: 100%;
+  width: 70%;
+  object-fit: contain;
 }
 
 .centerDiv {
@@ -77,6 +82,15 @@
   color: #434242;
   font-weight: 600;
   font-size: 1.5em;
+}
+
+.rigthDiv a img {
+  width: 20px;
+}
+
+#spain {
+  width: 50px;
+  border-radius: 5px;
 }
 
 
@@ -165,4 +179,113 @@
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.rightDivMobile, .stickyMobile {
+  display: none;
+}
+
+
+@media (max-width: 1483px) {
+
+
+
+  .sticky,
+  .rigthDiv,
+  .centerDiv {
+    display: none;
+  }
+
+  .navbarContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50px;
+  }
+
+  .leftDiv {
+     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .leftDiv img {
+    width: 150px;
+    height: 50px;
+  }
+
+  .rightDivMobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 100px;
+    background-color: #e60012;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .rightDivMobile a img {
+    border: 2px solid #fff;
+  }
+
+  .stickyMobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: calc(100%);
+    height: 100px;
+    position: fixed;
+    z-index: 99999;
+    bottom: 30px;
+  }
+
+  .display {
+    position: relative;
+    width: 95%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  .display a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .findIcon {
+    position: absolute;
+    border: 1px solid #e60012;
+    background-color: #e60012;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -20px;
+  }
+
+  .leftDisplay {
+    width: 50%;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 50px;
+  }
+
+
+
+  .rightDisplay {
+    width: 50%;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 50px;
+  }
+
+
 }
