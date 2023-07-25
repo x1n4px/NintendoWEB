@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 
@@ -23,6 +24,7 @@ section {
   border-bottom: 1px solid #333;
   ;
 }
+
 
 .game {
   background-image: url('../../../assets/symbol-scatter-haikei.png');
@@ -276,19 +278,54 @@ footer p {
   transition: color 0.3s;
 }
 
+.gameMobiles {
+  display: none;
+}
+
 @media (max-width: 767px) {
-  footer {
+  .container {
+    overflow-x: hidden;
+  }
+  #stc1 {
+    height: 650px;
+  }
+
+  .game {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 
-  .imgFotter img {
+  .game img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .gameMobiles {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .gameMobiles p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.55em;
+  }
+
+  footer {
     display: none;
   }
 
-  footer p {
-    padding: 50px;
-    font-size: 1.75em;
-  }
 
   .shakeButton {
     width: 100%;
@@ -306,6 +343,12 @@ footer p {
     padding-left: 300px;
   }
 
+  .onlineStoreText {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
 
@@ -500,12 +543,8 @@ footer p {
     overflow: hidden;
 
   }
-  .charactersCard {
-    width: 50%;
-    /* Los elementos se mostrarán en columnas de dos en dos */
-    max-width: 400px;
-    /* Limita el tamaño máximo de cada elemento */
-  }
+
+
 
   #featured {
     width: 100%;
@@ -517,37 +556,93 @@ footer p {
 
   #news {
     width: 100%;
-    padding: 20px;
+  }
+  #news h1 {
+    padding-left: 30px;
   }
 
   .newInfo {
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
 
   #characters {
-    width: 100%;
+    width: 98%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
   }
-
-
+  .charactersCard {
+    width: calc(50% - 30px);
+    height: 250px;
+    /* Los elementos se mostrarán en columnas de dos en dos */
+    max-width: 400px;
+   }
+  .text{
+    font-size: large;
+  }
   .cardInfo {
     width: 80%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 0px;
-
+    margin-bottom: 30px;
   }
+
   .mininewInfo {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
   }
 
   .minicardInfo {
     width: calc(80%);
-    height: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
    }
 
+   .shakeButtonNews {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+   }
+
+
+   .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
 }

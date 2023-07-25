@@ -2,7 +2,12 @@
   <section id="stc1">
     <div class="game">
       <img src="../../../assets/game1.png" alt="">
-
+      <div class="gameMobiles">
+        <p>Give this pint-sized adventure a try with a free demo</p>
+        <div class="btnFotter">
+          <button class="shakeButton">Try the demo!</button>
+        </div>
+      </div>
     </div>
 
     <footer>
@@ -16,7 +21,7 @@
     </footer>
   </section>
 
-   <section id="featured">
+  <section id="featured">
     <div class="content">
       <span id="title">Featured</span>
       <img src="../../../assets/pikminCabe.png" alt="">
@@ -57,7 +62,7 @@
     </div>
   </section>
 
-  <section id="featured">
+   <section id="featured">
     <div class="content">
       <span id="title">Gaming systems</span>
       <img src="../../../assets/gamingsystemCab.png" alt="">
@@ -68,7 +73,7 @@
     </div>
   </section>
 
-  <section id="news">
+   <section id="news">
     <h1>News</h1>
     <div class="newInfo">
       <div class="cardInfo" *ngFor="let new of listaNews.slice(0,2)">
@@ -88,11 +93,14 @@
         <a href="">Read more</a>
       </div>
     </div>
-    <button id="newArticlesNews" class="shakeButton">See all news articles</button>
+    <div class="shakeButtonNews">
+      <button id="newArticlesNews" class="shakeButton">See all news articles</button>
 
+    </div>
   </section>
-<!--
-  <section id="characters">
+
+
+   <section id="characters">
     <h1>Characters</h1>
 
     <div class="charactersContainer">
@@ -109,6 +117,6 @@
 
       </div>
     </div>
-  </section> -->
+  </section>
 
 </div>

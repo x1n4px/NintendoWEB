@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="interior">
+    <div class="selector">
+      <div class="selectorHeader">
+        <p><input type="checkbox">Deals</p>
+        <p><input type="checkbox">Demo available</p>
+        <p><input type="checkbox">Game Voucher eligible</p>
+        <p><input type="checkbox">Games with DLC</p>
+      </div>
+      <details>
+        <summary>Nintendo Switch Online features</summary>
+        <p><input type="checkbox"> Online Play</p>
+        <p><input type="checkbox"> Save Date Cloud</p>
+      </details>
+      <details>
+        <summary>Platform</summary>
+        <p><input type="checkbox"> Nintendo Switch</p>
+      </details>
+      <details>
+        <summary>
+          Availability
+        </summary>
+        <p><input type="checkbox"> Available now</p>
+        <p><input type="checkbox"> Coming soon</p>
+        <p><input type="checkbox"> Pre-order</p>
+      </details>
+      <details>
+        <summary>Game type</summary>
+      </details>
+      <details>
+        <summary>Edition</summary>
+      </details>
+      <details>
+        <summary>Character of series</summary>
+      </details>
+      <details>
+        <summary>Price</summary>
+      </details>
+      <details>
+        <summary>ESBR Rating</summary>
+      </details>
+      <details>
+        <summary>No. of players</summary>
+      </details>
+    </div>
+    <div class="selectorCartas">
+      <div class="cards" *ngFor="let game of GameList">
+        <div class="imgcard">
+          <img [src]="game.imagen" alt="">
+        </div>
+
+        <div class="uppercard">
+          <span>{{game.name}}</span>
+          <label style="font-size: 1em;font-weight: 200;color: #333;margin-left: 20px;"><label
+              *ngIf="isFechaMayorQueActual(game.releaseDate)">Avaible</label> {{game.releaseDate}}</label>
+
+              <div class="preorderTag" *ngIf="isFechaMayorQueActual(game.releaseDate)">
+                Pre-order now
+              </div>
+              <div class="newTag" *ngIf="isNew(game.releaseDate)">
+                New!
+              </div>
+
+        </div>
+        <div class="lowcard">
+          <span style="font-size: 1.8em;font-weight: 600;color: #333;">${{game.price}}</span>
+          <span>{{game.console}}</span>
+          <div class="bajos">
+            <div class="text-with-bar">
+              <div class="bar"></div>
+              <span>Nintendo Switch</span>
+            </div>
+            <button class="btn">
+              <svg viewBox="0 0 17.503 15.625" height="20.625" width="20.503" xmlns="http://www.w3.org/2000/svg"
+                class="icon">
+                <path transform="translate(0 0)"
+                  d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z"
+                  id="Fill"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
